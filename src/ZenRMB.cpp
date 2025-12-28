@@ -85,6 +85,8 @@ void ParseError ( const char *fmt, ... )
     fprintf ( stderr, "\n" );
 
     lastLine = parseLine;
+
+    va_end ( args );
 }
 
 int ParseNumber ( char *&text )
