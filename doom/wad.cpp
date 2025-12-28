@@ -1124,7 +1124,7 @@ bool wadList::Save ( const char *newName )
             errors = true;
             fprintf ( stderr, "\nERROR: wadList::Save - Error writing directory." );
         }
-        delete dir;
+        delete [] dir;
 
         fseek ( tmpFile, 0, SEEK_SET );
         if ( fwrite ( &m_Header, sizeof ( m_Header ), 1, tmpFile ) != 1 ) {
